@@ -6,11 +6,69 @@
 <meta name="theme-color" content="#0b1220">
 <link rel="manifest" href="manifest.json">
 <title>Durga Puja Checklist</title>
+
 <style>
-:root{color-scheme:dark}*{box-sizing:border-box}body{margin:0;background:#08111f;color:#e5e7eb;font:15px system-ui,-apple-system,Segoe UI,sans-serif}button,input,select{font:inherit}button{cursor:pointer;background:#111c2e;color:#fff;border:1px solid #334155;border-radius:9px;padding:10px 12px}button:hover{filter:brightness(1.15)}button:disabled{opacity:.45;cursor:not-allowed}.primary{background:#2563eb;border-color:#2563eb}.green{background:#15803d;border-color:#15803d}.danger{background:#991b1b;border-color:#991b1b}.muted{color:#94a3b8;font-size:13px}.page{max-width:1100px;margin:auto;padding:22px 16px}.title{font-size:28px;font-weight:800;margin:0 0 5px}.subtitle{color:#94a3b8;margin-bottom:24px}.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.card,.panel{background:#0f172a;border:1px solid #263449;border-radius:15px;padding:18px}.card h2{font-size:20px;margin:0 0 7px}.card p{color:#94a3b8;margin:0 0 14px}.bar{height:8px;background:#263449;border-radius:20px;overflow:hidden;margin:10px 0}.fill{height:100%;background:#22c55e;width:0}.card-actions,.toolbar,.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}.card-actions{margin-top:15px}#checklistScreen{display:none}.topbar{position:sticky;top:0;z-index:5;background:#0f172a;border-bottom:1px solid #263449;padding:14px}.top-inner{max-width:1100px;margin:auto}.top-inner h1{font-size:23px;margin:10px 0}.controls{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}.controls label{display:flex;gap:7px;align-items:center;color:#cbd5e1}.controls input,.controls select,.search{background:#111c2e;color:#fff;border:1px solid #334155;border-radius:9px;padding:10px;min-width:150px}.stats{display:flex;justify-content:space-between;gap:10px}.layout{max-width:1100px;margin:auto;padding:16px;display:grid;grid-template-columns:minmax(0,1.5fr) minmax(260px,1fr);gap:14px}.search{width:100%;margin:12px 0}.item{display:flex;align-items:center;gap:9px;background:#0f172a;border:1px solid #263449;border-radius:10px;padding:10px;margin:7px 0}.item.done{opacity:.58}.item.done .name{text-decoration:line-through}.check{width:20px;height:20px;accent-color:#22c55e;flex-shrink:0}.num{width:30px;color:#94a3b8;text-align:center;flex-shrink:0}.name{flex:1;overflow-wrap:anywhere}.map{padding:7px 9px}.remaining{white-space:pre-wrap;overflow-wrap:anywhere;max-height:45vh;overflow:auto;color:#cbd5e1;font-size:13px}.notice{padding:10px 12px;background:#3f1d1d;border:1px solid #7f1d1d;color:#fecaca;border-radius:9px;margin:10px 0}.section-title{font-weight:750;font-size:17px;margin:0 0 10px}.empty{color:#94a3b8;padding:15px 0}.small{font-size:12px}@media(max-width:760px){.cards{grid-template-columns:1fr}.layout{display:block}.layout>.panel{margin-bottom:12px}.title{font-size:24px}.top-inner h1{font-size:20px}.remaining{max-height:260px}.item{gap:7px;padding:9px}.num{width:24px}.map{font-size:12px;padding:7px}}
+:root{color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:#08111f;color:#e5e7eb;font:15px system-ui,-apple-system,Segoe UI,sans-serif}
+button,input,select{font:inherit}
+button{cursor:pointer;background:#111c2e;color:#fff;border:1px solid #334155;border-radius:9px;padding:10px 12px}
+button:hover{filter:brightness(1.15)}
+button:disabled{opacity:.45;cursor:not-allowed}
+.primary{background:#2563eb;border-color:#2563eb}
+.green{background:#15803d;border-color:#15803d}
+.danger{background:#991b1b;border-color:#991b1b}
+.muted{color:#94a3b8;font-size:13px}
+.page{max-width:1100px;margin:auto;padding:22px 16px}
+.title{font-size:28px;font-weight:800;margin:0 0 5px}
+.subtitle{color:#94a3b8;margin-bottom:24px}
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.card,.panel{background:#0f172a;border:1px solid #263449;border-radius:15px;padding:18px}
+.card h2{font-size:20px;margin:0 0 7px}
+.card p{color:#94a3b8;margin:0 0 14px}
+.bar{height:8px;background:#263449;border-radius:20px;overflow:hidden;margin:10px 0}
+.fill{height:100%;background:#22c55e;width:0}
+.card-actions,.toolbar,.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.card-actions{margin-top:15px}
+#checklistScreen{display:none}
+.topbar{position:sticky;top:0;z-index:5;background:#0f172a;border-bottom:1px solid #263449;padding:14px}
+.top-inner{max-width:1100px;margin:auto}
+.top-inner h1{font-size:23px;margin:10px 0}
+.controls{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}
+.controls label{display:flex;gap:7px;align-items:center;color:#cbd5e1}
+.controls input,.controls select,.search{background:#111c2e;color:#fff;border:1px solid #334155;border-radius:9px;padding:10px;min-width:150px}
+.stats{display:flex;justify-content:space-between;gap:10px}
+.layout{max-width:1100px;margin:auto;padding:16px;display:grid;grid-template-columns:minmax(0,1.5fr) minmax(260px,1fr);gap:14px}
+.search{width:100%;margin:12px 0}
+.item{display:flex;align-items:center;gap:9px;background:#0f172a;border:1px solid #263449;border-radius:10px;padding:10px;margin:7px 0}
+.item.done{opacity:.58}
+.item.done .name{text-decoration:line-through}
+.check{width:20px;height:20px;accent-color:#22c55e;flex-shrink:0}
+.num{width:30px;color:#94a3b8;text-align:center;flex-shrink:0}
+.name{flex:1;overflow-wrap:anywhere}
+.map{padding:7px 9px}
+.remaining{white-space:pre-wrap;overflow-wrap:anywhere;max-height:45vh;overflow:auto;color:#cbd5e1;font-size:13px}
+.notice{padding:10px 12px;background:#3f1d1d;border:1px solid #7f1d1d;color:#fecaca;border-radius:9px;margin:10px 0}
+.section-title{font-weight:750;font-size:17px;margin:0 0 10px}
+.empty{color:#94a3b8;padding:15px 0}
+.small{font-size:12px}
+
+@media(max-width:760px){
+.cards{grid-template-columns:1fr}
+.layout{display:block}
+.layout>.panel{margin-bottom:12px}
+.title{font-size:24px}
+.top-inner h1{font-size:20px}
+.remaining{max-height:260px}
+.item{gap:7px;padding:9px}
+.num{width:24px}
+.map{font-size:12px;padding:7px}
+}
 </style>
 </head>
+
 <body>
+
 <section id="homeScreen" class="page">
   <h1 class="title">Durga Puja Checklist</h1>
   <div class="subtitle">Choose the area you want to visit. Each visit date is saved separately.</div>
@@ -19,16 +77,31 @@
 </section>
 
 <section id="checklistScreen">
+
   <header class="topbar">
     <div class="top-inner">
+
       <button onclick="goHome()">← Choose area</button>
       <h1 id="areaTitle"></h1>
+
       <div class="controls">
         <label>Visit date <input id="visitDate" type="date"></label>
-        <label>Saved visits <select id="historySelect"><option value="">Choose previous date…</option></select></label>
+        <label>Saved visits
+          <select id="historySelect">
+            <option value="">Choose previous date…</option>
+          </select>
+        </label>
       </div>
-      <div class="stats"><span id="stats">0 / 0 visited</span><span id="percent">0%</span></div>
-      <div class="bar"><div class="fill" id="progressFill"></div></div>
+
+      <div class="stats">
+        <span id="stats">0 / 0 visited</span>
+        <span id="percent">0%</span>
+      </div>
+
+      <div class="bar">
+        <div class="fill" id="progressFill"></div>
+      </div>
+
       <div class="toolbar">
         <button class="green" onclick="continueRemaining()">Continue remaining</button>
         <button onclick="saveLock()">🔒 Save / Lock this date</button>
@@ -37,65 +110,544 @@
         <button class="danger" onclick="restartArea()">Restart whole area</button>
         <button class="primary" onclick="addPuja()">+ Add Puja</button>
       </div>
-      <div id="lockNotice" class="notice" hidden>This date is locked. Its ticks cannot be changed. Select another date or restart this date to edit it.</div>
+
+      <div id="lockNotice" class="notice" hidden>
+        This date is locked. Its ticks cannot be changed. Select another date or restart this date to edit it.
+      </div>
+
     </div>
   </header>
+
   <main class="layout">
     <section class="panel">
       <div class="section-title">Puja locations</div>
       <input id="search" class="search" placeholder="Search Puja locations…">
       <div id="checklist"></div>
     </section>
+
     <aside class="panel">
       <div class="section-title">Unticked locations</div>
       <div id="remaining" class="remaining"></div>
+
       <hr style="border-color:#263449;margin:16px 0">
+
       <div class="section-title">How date history works</div>
       <p class="muted">Every date has its own saved ticks. Choose an old date from “Saved visits” to retrieve that exact record.</p>
       <p class="muted">To continue on a new date, choose the new date and press “Continue remaining”. The latest earlier visit is copied into the new date; the old record stays unchanged.</p>
     </aside>
   </main>
+
 </section>
 
-<script src="data.js"></script>
+<!-- Cache-busting version: update this number when data.js changes -->
+<script src="data.js?v=6"></script>
+
 <script>
 const $ = id => document.getElementById(id);
-const homeScreen = $('homeScreen'), checklistScreen = $('checklistScreen');
-const visitDate = $('visitDate'), historySelect = $('historySelect'), search = $('search');
-let currentArea = null;
-let customPujas = JSON.parse(localStorage.getItem('puja-custom-items') || '{}');
 
-function todayLocal(){const d=new Date();return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;}
-function safeParse(value,fallback){try{return JSON.parse(value)||fallback;}catch{return fallback;}}
-function progressKey(area,date){return `puja-progress:${area}:${date}`;}
-function lockKey(area,date){return `puja-lock:${area}:${date}`;}
-function datesKey(area){return `puja-dates:${area}`;}
-function getDates(area){return safeParse(localStorage.getItem(datesKey(area)),[]).sort();}
-function registerDate(area,date){if(!date)return;const dates=getDates(area);if(!dates.includes(date)){dates.push(date);dates.sort();localStorage.setItem(datesKey(area),JSON.stringify(dates));}}
-function getProgress(area,date){return safeParse(localStorage.getItem(progressKey(area,date)),{});}
-function setProgress(area,date,progress){localStorage.setItem(progressKey(area,date),JSON.stringify(progress));registerDate(area,date);}
-function isLocked(area,date){return localStorage.getItem(lockKey(area,date))==='1';}
-function getPlaces(area){return [...(AREAS[area]||[])];}
-function countVisited(area,date){return Object.values(getProgress(area,date)).filter(Boolean).length;}
-function latestDate(area){const dates=getDates(area);return dates.length?dates[dates.length-1]:null;}
-function renderHome(){const root=$('areaCards');root.replaceChildren();Object.keys(AREAS).forEach(area=>{const dates=getDates(area);const last=latestDate(area);const total=getPlaces(area).length;const done=last?countVisited(area,last):0;const pct=total?Math.round(done*100/total):0;const card=document.createElement('article');card.className='card';const h=document.createElement('h2');h.textContent=area;const desc=document.createElement('p');desc.textContent=`${total} Puja locations`;const status=document.createElement('div');status.textContent=last?`${done}/${total} visited on ${formatDate(last)}${done<total?` · ${total-done} remaining`: ' · Complete'}`:'Not started yet';const bar=document.createElement('div');bar.className='bar';const fill=document.createElement('div');fill.className='fill';fill.style.width=pct+'%';bar.append(fill);const info=document.createElement('div');info.className='muted';info.textContent=`${dates.length} saved visit date${dates.length===1?'':'s'}`;const actions=document.createElement('div');actions.className='card-actions';const openBtn=document.createElement('button');openBtn.className='primary';openBtn.textContent='Open area';openBtn.onclick=()=>openArea(area);actions.append(openBtn);if(last&&done<total){const cont=document.createElement('button');cont.className='green';cont.textContent='Continue remaining';cont.onclick=()=>{openArea(area);visitDate.value=todayLocal();continueRemaining();};actions.append(cont);}card.append(h,desc,status,bar,info,actions);root.append(card);});}
-function openArea(area,date=null){currentArea=area;homeScreen.style.display='none';checklistScreen.style.display='block';visitDate.value=date||todayLocal();search.value='';refreshHistory();renderChecklist();window.scrollTo(0,0);}
-function goHome(){currentArea=null;checklistScreen.style.display='none';homeScreen.style.display='block';renderHome();window.scrollTo(0,0);}
-function formatDate(date){if(!date)return '';const [y,m,d]=date.split('-');return `${d}/${m}/${y}`;}
-function refreshHistory(){if(!currentArea)return;const chosen=visitDate.value;historySelect.replaceChildren(new Option('Choose previous date…',''));getDates(currentArea).slice().reverse().forEach(date=>{const n=countVisited(currentArea,date),total=getPlaces(currentArea).length;const opt=new Option(`${formatDate(date)} — ${n}/${total} visited${isLocked(currentArea,date)?' 🔒':''}`,date);historySelect.add(opt);});historySelect.value=getDates(currentArea).includes(chosen)?chosen:'';}
-function renderChecklist(){if(!currentArea)return;const date=visitDate.value;if(!date)return;registerDate(currentArea,date);const places=getPlaces(currentArea),progress=getProgress(currentArea,date),locked=isLocked(currentArea,date),q=search.value.trim().toLowerCase(),list=$('checklist');list.replaceChildren();$('areaTitle').textContent=currentArea+' — '+formatDate(date)+(locked?' 🔒':'');$('lockNotice').hidden=!locked;places.forEach((name,index)=>{if(q&&!name.toLowerCase().includes(q))return;const row=document.createElement('div');row.className='item'+(progress[index]?' done':'');const check=document.createElement('input');check.type='checkbox';check.className='check';check.checked=progress[index]===true;check.disabled=locked;check.setAttribute('aria-label','Visited '+name);check.addEventListener('change',()=>{const updated=getProgress(currentArea,visitDate.value);updated[index]=check.checked;setProgress(currentArea,visitDate.value,updated);renderChecklist();refreshHistory();});const num=document.createElement('span');num.className='num';num.textContent=index+1;const label=document.createElement('span');label.className='name';label.textContent=name;const map=document.createElement('button');map.className='map';map.textContent='Map';map.onclick=()=>openMap(name);row.append(check,num,label,map);list.append(row);});const visited=Object.values(progress).filter(Boolean).length,total=places.length,pct=total?Math.round(visited*100/total):0;$('stats').textContent=`${visited} / ${total} visited · ${total-visited} remaining`;$('percent').textContent=pct+'%';$('progressFill').style.width=pct+'%';const remaining=places.map((name,index)=>({name,index})).filter(x=>progress[x.index]!==true);$('remaining').textContent=remaining.length?remaining.map(x=>`${x.index+1}. ${x.name}`).join('\n'):'All locations completed 🎉';}
-function openMap(name){window.open('https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(name+', Kolkata, West Bengal'),'_blank','noopener');}
-function continueRemaining(){if(!currentArea||!visitDate.value)return;const area=currentArea,date=visitDate.value;let target=getProgress(area,date);const hasCurrent=Object.keys(target).length>0;const earlier=getDates(area).filter(d=>d<date).sort();if(!hasCurrent&&earlier.length){const previousDate=earlier[earlier.length-1];if(!confirm(`Copy progress from ${formatDate(previousDate)} into ${formatDate(date)}?\n\nThe previous date will remain unchanged.`))return;target={...getProgress(area,previousDate)};setProgress(area,date,target);}else if(!hasCurrent&&!earlier.length){registerDate(area,date);alert('No earlier visit was found. This date is ready to start from the beginning.');}search.value='';renderChecklist();refreshHistory();const first=getPlaces(area).findIndex((_,i)=>target[i]!==true);if(first>=0){setTimeout(()=>{const rows=[...document.querySelectorAll('#checklist .item')];rows[first]?.scrollIntoView({behavior:'smooth',block:'center'});},60);}else alert('All locations are already completed for this date.');}
-function saveLock(){if(!currentArea||!visitDate.value)return;if(isLocked(currentArea,visitDate.value)){alert('This date is already locked.');return;}if(!confirm(`Save and lock ${currentArea} for ${formatDate(visitDate.value)}? You will not be able to edit its ticks until you restart this date.`))return;localStorage.setItem(lockKey(currentArea,visitDate.value),'1');registerDate(currentArea,visitDate.value);renderChecklist();refreshHistory();}
-function restartDate(){if(!currentArea||!visitDate.value)return;const date=visitDate.value;if(!confirm(`Clear ticks and unlock only ${currentArea} on ${formatDate(date)}? Other dates will be preserved.`))return;localStorage.removeItem(progressKey(currentArea,date));localStorage.removeItem(lockKey(currentArea,date));registerDate(currentArea,date);renderChecklist();refreshHistory();}
-function restartArea(){if(!currentArea)return;if(!confirm(`Delete ALL saved dates and progress for ${currentArea}? This cannot be undone.`))return;for(const key of Object.keys(localStorage)){if(key.startsWith(`puja-progress:${currentArea}:`)||key.startsWith(`puja-lock:${currentArea}:`))localStorage.removeItem(key);}localStorage.removeItem(datesKey(currentArea));visitDate.value=todayLocal();registerDate(currentArea,visitDate.value);search.value='';renderChecklist();refreshHistory();}
-function exportRemaining(){if(!currentArea)return;const places=getPlaces(currentArea),progress=getProgress(currentArea,visitDate.value),remaining=places.map((name,index)=>({name,index})).filter(x=>progress[x.index]!==true);const text=`DURGA PUJA REMAINING LIST\nArea: ${currentArea}\nDate: ${visitDate.value}\nRemaining: ${remaining.length}\n\n${remaining.map(x=>`${x.index+1}. ${x.name}`).join('\n')}`;const blob=new Blob([text],{type:'text/plain;charset=utf-8'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=currentArea.replace(/[^a-z0-9]+/gi,'_')+'_'+visitDate.value+'_unticked.txt';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
-function addPuja(){if(!currentArea)return;const name=prompt(`Enter the new Puja name for ${currentArea}:`);if(!name||!name.trim())return;const clean=name.trim();if(getPlaces(currentArea).some(x=>x.toLowerCase()===clean.toLowerCase())){alert('That location already exists in this area.');return;}if(!customPujas[currentArea])customPujas[currentArea]=[];customPujas[currentArea].push(clean);localStorage.setItem('puja-custom-items',JSON.stringify(customPujas));AREAS[currentArea].push(clean);renderChecklist();renderHome();alert('Puja added and saved in this browser.');}
-visitDate.addEventListener('change',()=>{if(!currentArea||!visitDate.value)return;registerDate(currentArea,visitDate.value);refreshHistory();renderChecklist();});historySelect.addEventListener('change',()=>{if(historySelect.value){visitDate.value=historySelect.value;renderChecklist();refreshHistory();}});search.addEventListener('input',renderChecklist);
-// Restore custom additions after the base data file loads.
-Object.keys(customPujas).forEach(area=>{if(AREAS[area]){for(const name of customPujas[area])if(!AREAS[area].some(x=>x.toLowerCase()===name.toLowerCase()))AREAS[area].push(name);}});
+const homeScreen = $('homeScreen');
+const checklistScreen = $('checklistScreen');
+const visitDate = $('visitDate');
+const historySelect = $('historySelect');
+const search = $('search');
+
+let currentArea = null;
+
+let customPujas = JSON.parse(
+  localStorage.getItem('puja-custom-items') || '{}'
+);
+
+function todayLocal() {
+  const d = new Date();
+  return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+}
+
+function safeParse(value, fallback) {
+  try {
+    return JSON.parse(value) || fallback;
+  } catch {
+    return fallback;
+  }
+}
+
+function progressKey(area, date) {
+  return `puja-progress:${area}:${date}`;
+}
+
+function lockKey(area, date) {
+  return `puja-lock:${area}:${date}`;
+}
+
+function datesKey(area) {
+  return `puja-dates:${area}`;
+}
+
+function getDates(area) {
+  return safeParse(localStorage.getItem(datesKey(area)), []).sort();
+}
+
+function registerDate(area, date) {
+  if (!date) return;
+
+  const dates = getDates(area);
+
+  if (!dates.includes(date)) {
+    dates.push(date);
+    dates.sort();
+    localStorage.setItem(datesKey(area), JSON.stringify(dates));
+  }
+}
+
+function getProgress(area, date) {
+  return safeParse(localStorage.getItem(progressKey(area, date)), {});
+}
+
+function setProgress(area, date, progress) {
+  localStorage.setItem(progressKey(area, date), JSON.stringify(progress));
+  registerDate(area, date);
+}
+
+function isLocked(area, date) {
+  return localStorage.getItem(lockKey(area, date)) === '1';
+}
+
+function getPlaces(area) {
+  return [...(AREAS[area] || [])];
+}
+
+function countVisited(area, date) {
+  return Object.values(getProgress(area, date)).filter(Boolean).length;
+}
+
+function latestDate(area) {
+  const dates = getDates(area);
+  return dates.length ? dates[dates.length - 1] : null;
+}
+
+function renderHome() {
+  const root = $('areaCards');
+  root.replaceChildren();
+
+  Object.keys(AREAS).forEach(area => {
+    const dates = getDates(area);
+    const last = latestDate(area);
+    const total = getPlaces(area).length;
+    const done = last ? countVisited(area, last) : 0;
+    const pct = total ? Math.round(done * 100 / total) : 0;
+
+    const card = document.createElement('article');
+    card.className = 'card';
+
+    const h = document.createElement('h2');
+    h.textContent = area;
+
+    const desc = document.createElement('p');
+    desc.textContent = `${total} Puja locations`;
+
+    const status = document.createElement('div');
+    status.textContent = last
+      ? `${done}/${total} visited on ${formatDate(last)}${done < total ? ` · ${total-done} remaining` : ' · Complete'}`
+      : 'Not started yet';
+
+    const bar = document.createElement('div');
+    bar.className = 'bar';
+
+    const fill = document.createElement('div');
+    fill.className = 'fill';
+    fill.style.width = pct + '%';
+    bar.append(fill);
+
+    const info = document.createElement('div');
+    info.className = 'muted';
+    info.textContent = `${dates.length} saved visit date${dates.length === 1 ? '' : 's'}`;
+
+    const actions = document.createElement('div');
+    actions.className = 'card-actions';
+
+    const openBtn = document.createElement('button');
+    openBtn.className = 'primary';
+    openBtn.textContent = 'Open area';
+    openBtn.onclick = () => openArea(area);
+    actions.append(openBtn);
+
+    if (last && done < total) {
+      const cont = document.createElement('button');
+      cont.className = 'green';
+      cont.textContent = 'Continue remaining';
+
+      cont.onclick = () => {
+        openArea(area);
+        visitDate.value = todayLocal();
+        continueRemaining();
+      };
+
+      actions.append(cont);
+    }
+
+    card.append(h, desc, status, bar, info, actions);
+    root.append(card);
+  });
+}
+
+function openArea(area, date = null) {
+  currentArea = area;
+  homeScreen.style.display = 'none';
+  checklistScreen.style.display = 'block';
+
+  visitDate.value = date || todayLocal();
+  search.value = '';
+
+  refreshHistory();
+  renderChecklist();
+
+  window.scrollTo(0, 0);
+}
+
+function goHome() {
+  currentArea = null;
+  checklistScreen.style.display = 'none';
+  homeScreen.style.display = 'block';
+
+  renderHome();
+  window.scrollTo(0, 0);
+}
+
+function formatDate(date) {
+  if (!date) return '';
+
+  const [y, m, d] = date.split('-');
+  return `${d}/${m}/${y}`;
+}
+
+function refreshHistory() {
+  if (!currentArea) return;
+
+  const chosen = visitDate.value;
+
+  historySelect.replaceChildren(
+    new Option('Choose previous date…', '')
+  );
+
+  getDates(currentArea).slice().reverse().forEach(date => {
+    const n = countVisited(currentArea, date);
+    const total = getPlaces(currentArea).length;
+
+    const opt = new Option(
+      `${formatDate(date)} — ${n}/${total} visited${isLocked(currentArea, date) ? ' 🔒' : ''}`,
+      date
+    );
+
+    historySelect.add(opt);
+  });
+
+  historySelect.value = getDates(currentArea).includes(chosen)
+    ? chosen
+    : '';
+}
+
+function renderChecklist() {
+  if (!currentArea) return;
+
+  const date = visitDate.value;
+  if (!date) return;
+
+  registerDate(currentArea, date);
+
+  const places = getPlaces(currentArea);
+  const progress = getProgress(currentArea, date);
+  const locked = isLocked(currentArea, date);
+  const q = search.value.trim().toLowerCase();
+  const list = $('checklist');
+
+  list.replaceChildren();
+
+  $('areaTitle').textContent =
+    currentArea + ' — ' + formatDate(date) + (locked ? ' 🔒' : '');
+
+  $('lockNotice').hidden = !locked;
+
+  places.forEach((name, index) => {
+    if (q && !name.toLowerCase().includes(q)) return;
+
+    const row = document.createElement('div');
+    row.className = 'item' + (progress[index] ? ' done' : '');
+
+    const check = document.createElement('input');
+    check.type = 'checkbox';
+    check.className = 'check';
+    check.checked = progress[index] === true;
+    check.disabled = locked;
+    check.setAttribute('aria-label', 'Visited ' + name);
+
+    check.addEventListener('change', () => {
+      const updated = getProgress(currentArea, visitDate.value);
+      updated[index] = check.checked;
+
+      setProgress(currentArea, visitDate.value, updated);
+      renderChecklist();
+      refreshHistory();
+    });
+
+    const num = document.createElement('span');
+    num.className = 'num';
+    num.textContent = index + 1;
+
+    const label = document.createElement('span');
+    label.className = 'name';
+    label.textContent = name;
+
+    const map = document.createElement('button');
+    map.className = 'map';
+    map.textContent = 'Map';
+    map.onclick = () => openMap(name);
+
+    row.append(check, num, label, map);
+    list.append(row);
+  });
+
+  const visited = Object.values(progress).filter(Boolean).length;
+  const total = places.length;
+  const pct = total ? Math.round(visited * 100 / total) : 0;
+
+  $('stats').textContent =
+    `${visited} / ${total} visited · ${total-visited} remaining`;
+
+  $('percent').textContent = pct + '%';
+  $('progressFill').style.width = pct + '%';
+
+  const remaining = places
+    .map((name, index) => ({name, index}))
+    .filter(x => progress[x.index] !== true);
+
+  $('remaining').textContent = remaining.length
+    ? remaining.map(x => `${x.index+1}. ${x.name}`).join('\n')
+    : 'All locations completed 🎉';
+}
+
+function openMap(name) {
+  window.open(
+    'https://www.google.com/maps/search/?api=1&query=' +
+    encodeURIComponent(name + ', Kolkata, West Bengal'),
+    '_blank',
+    'noopener'
+  );
+}
+
+function continueRemaining() {
+  if (!currentArea || !visitDate.value) return;
+
+  const area = currentArea;
+  const date = visitDate.value;
+  let target = getProgress(area, date);
+
+  const hasCurrent = Object.keys(target).length > 0;
+  const earlier = getDates(area).filter(d => d < date).sort();
+
+  if (!hasCurrent && earlier.length) {
+    const previousDate = earlier[earlier.length - 1];
+
+    if (!confirm(
+      `Copy progress from ${formatDate(previousDate)} into ${formatDate(date)}?\n\nThe previous date will remain unchanged.`
+    )) return;
+
+    target = {...getProgress(area, previousDate)};
+    setProgress(area, date, target);
+
+  } else if (!hasCurrent && !earlier.length) {
+    registerDate(area, date);
+    alert('No earlier visit was found. This date is ready to start from the beginning.');
+  }
+
+  search.value = '';
+  renderChecklist();
+  refreshHistory();
+
+  const first = getPlaces(area).findIndex((_, i) => target[i] !== true);
+
+  if (first >= 0) {
+    setTimeout(() => {
+      const rows = [...document.querySelectorAll('#checklist .item')];
+      rows[first]?.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center'
+      });
+    }, 60);
+  } else {
+    alert('All locations are already completed for this date.');
+  }
+}
+
+function saveLock() {
+  if (!currentArea || !visitDate.value) return;
+
+  if (isLocked(currentArea, visitDate.value)) {
+    alert('This date is already locked.');
+    return;
+  }
+
+  if (!confirm(
+    `Save and lock ${currentArea} for ${formatDate(visitDate.value)}? You will not be able to edit its ticks until you restart this date.`
+  )) return;
+
+  localStorage.setItem(lockKey(currentArea, visitDate.value), '1');
+  registerDate(currentArea, visitDate.value);
+
+  renderChecklist();
+  refreshHistory();
+}
+
+function restartDate() {
+  if (!currentArea || !visitDate.value) return;
+
+  const date = visitDate.value;
+
+  if (!confirm(
+    `Clear ticks and unlock only ${currentArea} on ${formatDate(date)}? Other dates will be preserved.`
+  )) return;
+
+  localStorage.removeItem(progressKey(currentArea, date));
+  localStorage.removeItem(lockKey(currentArea, date));
+
+  registerDate(currentArea, date);
+  renderChecklist();
+  refreshHistory();
+}
+
+function restartArea() {
+  if (!currentArea) return;
+
+  if (!confirm(
+    `Delete ALL saved dates and progress for ${currentArea}? This cannot be undone.`
+  )) return;
+
+  for (const key of Object.keys(localStorage)) {
+    if (
+      key.startsWith(`puja-progress:${currentArea}:`) ||
+      key.startsWith(`puja-lock:${currentArea}:`)
+    ) {
+      localStorage.removeItem(key);
+    }
+  }
+
+  localStorage.removeItem(datesKey(currentArea));
+
+  visitDate.value = todayLocal();
+  registerDate(currentArea, visitDate.value);
+
+  search.value = '';
+  renderChecklist();
+  refreshHistory();
+}
+
+function exportRemaining() {
+  if (!currentArea) return;
+
+  const places = getPlaces(currentArea);
+  const progress = getProgress(currentArea, visitDate.value);
+
+  const remaining = places
+    .map((name, index) => ({name, index}))
+    .filter(x => progress[x.index] !== true);
+
+  const content =
+    `DURGA PUJA REMAINING LIST\n` +
+    `Area: ${currentArea}\n` +
+    `Date: ${visitDate.value}\n` +
+    `Remaining: ${remaining.length}\n\n` +
+    remaining.map(x => `${x.index+1}. ${x.name}`).join('\n');
+
+  const blob = new Blob([content], {
+    type: 'text/plain;charset=utf-8'
+  });
+
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+
+  a.href = url;
+  a.download =
+    currentArea.replace(/[^a-z0-9]+/gi, '_') +
+    '_' + visitDate.value + '_unticked.txt';
+
+  a.click();
+
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+}
+
+function addPuja() {
+  if (!currentArea) return;
+
+  const name = prompt(`Enter the new Puja name for ${currentArea}:`);
+
+  if (!name || !name.trim()) return;
+
+  const clean = name.trim();
+
+  if (getPlaces(currentArea).some(
+    x => x.toLowerCase() === clean.toLowerCase()
+  )) {
+    alert('That location already exists in this area.');
+    return;
+  }
+
+  if (!customPujas[currentArea]) {
+    customPujas[currentArea] = [];
+  }
+
+  customPujas[currentArea].push(clean);
+
+  localStorage.setItem(
+    'puja-custom-items',
+    JSON.stringify(customPujas)
+  );
+
+  AREAS[currentArea].push(clean);
+
+  renderChecklist();
+  renderHome();
+
+  alert('Puja added and saved in this browser.');
+}
+
+visitDate.addEventListener('change', () => {
+  if (!currentArea || !visitDate.value) return;
+
+  registerDate(currentArea, visitDate.value);
+  refreshHistory();
+  renderChecklist();
+});
+
+historySelect.addEventListener('change', () => {
+  if (historySelect.value) {
+    visitDate.value = historySelect.value;
+    renderChecklist();
+    refreshHistory();
+  }
+});
+
+search.addEventListener('input', renderChecklist);
+
+// Restore custom additions after data.js loads.
+Object.keys(customPujas).forEach(area => {
+  if (AREAS[area]) {
+    for (const name of customPujas[area]) {
+      if (!AREAS[area].some(
+        x => x.toLowerCase() === name.toLowerCase()
+      )) {
+        AREAS[area].push(name);
+      }
+    }
+  }
+});
+
 renderHome();
-if('serviceWorker' in navigator && location.protocol!=='file:'){window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));}
+
+// Register the service worker.
+if ('serviceWorker' in navigator && location.protocol !== 'file:') {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('./sw.js').catch(() => {});
+  });
+}
 </script>
+
 </body>
 </html>
