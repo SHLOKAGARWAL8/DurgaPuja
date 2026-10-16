@@ -138,7 +138,8 @@ const AREAS = {
     "Netaji Colony Sarbojanin",
     "Forward Club",
     "Dadabhai"
-  ]
+  ],
+  
   "North": [
     "14 Pally",
     "Santosh Mitra Square",
